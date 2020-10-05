@@ -7,9 +7,12 @@ class BadgesList extends React.Component {
         {this.props.badges.map((badge) => {
           return (
             <li key={badge.id}>
+              <img src="{badge.avatar}" alt="Imagen de Badge" />
               <p>
                 {badge.firstName} {badge.lastName}
               </p>
+              <span className="Twitter__logo">@{badge.twitter}</span>
+              <p>{badge.jobTitle}</p>
             </li>
           );
         })}
