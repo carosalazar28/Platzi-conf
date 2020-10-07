@@ -1,6 +1,33 @@
 .Badges___list {
   box-shadow: 1px 1px 9px 0px #00000070;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
   background-color: white;
+}
+
+.Badges___list-container {
+  display: flex;
+}
+
+.Badges___list-img {
+  margin: 1.3rem;
+}
+
+.Badges___list-description {
+  margin: 1.3rem 0;
+}
+
+.Badges___list-name {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.Badges___list-logoTw {
+  width: 2rem;
+}
+
+.twitter__blue_font {
+  color: #007bff;
+  margin-left: 0.3rem;
 }
