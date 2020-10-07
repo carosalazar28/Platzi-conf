@@ -1,0 +1,26 @@
+.Error404___container {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  background: url("../../images/stars.svg"), #1b1b25;
+  background-repeat: repeat;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.Error404___container-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.Error404___container-left img {
+  margin-bottom: 1.5rem;
+}
+
+.Error404___container-left h1,
+.Error404___container-left h3 {
+  font-weight: bold;
+}
