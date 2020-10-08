@@ -1,4 +1,5 @@
-.Error404___container {
+.Error404___container,
+.Error500___container {
   width: 100%;
   min-height: calc(100vh - 60px);
   background: url("../../images/stars.svg"), #1b1b25;
@@ -10,17 +11,21 @@
   flex-wrap: wrap;
 }
 
-.Error404___container-left {
+.Error404___container-left,
+.Error500___container-left {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.Error404___container-left img {
+.Error404___container-left img,
+.Error500___container-left img {
   margin-bottom: 1.5rem;
 }
 
 .Error404___container-left h1,
-.Error404___container-left h3 {
+.Error404___container-left h3,
+.Error500___container-left h1,
+.Error500___container-left h3 {
   font-weight: bold;
 }

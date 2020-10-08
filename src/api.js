@@ -26,6 +26,7 @@ const api = {
     list() {
       //   return []; Si estuviera vacio
       return callApi("/badges");
+      // throw new Error("500: Server Error");
     },
     create(badge) {
       return callApi(`/badges`, {
