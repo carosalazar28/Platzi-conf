@@ -2,5 +2,6 @@
   "emmet.excludeLanguages": ["markdown"],
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
-  }
+  },
+  "auto-rename-tag.activationOnLanguage": ["html", "xml", "php", "javascript"]
 }
