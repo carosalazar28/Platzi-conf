@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logoTw from "../images/gorjeo.svg";
+import Gravatar from './Gravatar'
 import "../components/styles/BadgesList.css";
 class BadgesList extends React.Component {
   render() {
@@ -23,11 +24,11 @@ class BadgesList extends React.Component {
               <div className="Badges___list">
                 <div className="Badges___list-container">
                   <div className="Badges___list-img">
-                    <img
-                      className="rounded-circle"
-                      src={badge.avatarUrl}
-                      alt="Imagen de Badge"
-                    />
+                  <Gravatar
+                    className="rounded-circle"
+                    email={badge.email}
+                    alt="Avatar"
+                  />
                   </div>
                   <div className="Badges___list-description">
                     <p className="Badges___list-name">
