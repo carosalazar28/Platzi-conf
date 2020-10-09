@@ -1,9 +1,9 @@
 import React from "react";
-import header from "../images/badge-header.svg";
+import "../components/styles/BadgeNew.css";
+import header from "../images/platziconf-logo.svg";
 import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
-
-import "../components/styles/BadgeNew.css";
+import api from "../api";
 
 class BadgeNew extends React.Component {
   constructor(props) {
@@ -27,27 +27,45 @@ class BadgeNew extends React.Component {
       },
     });
   };
+
+  handleSubmit = async (e) => {
+    e.preventDefault();
+    this.setState({ loading: true, error: null });
+
+    try {
+      await api.badges.create(this.state.form);
+      this.setState({ loading: false });
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+    }
+  };
+
   render() {
     return (
       <React.Fragment>
         <div className="BadgeNew__hero">
-          <img className="img-fluid" src={header} alt="Hero" />
+          <img
+            className="BadgeNew__hero-image img-fluid"
+            src={header}
+            alt="Hero"
+          />
         </div>
         <div className="container">
           <div className="row">
             <div className="col-6">
               <Badge
-                firstName={this.state.form.firstname}
-                lastName={this.state.form.lastname}
-                jobTitle={this.state.form.jobtitle}
-                twitter={this.state.form.twitter}
-                email={this.state.form.email}
+                firstName={this.state.form.firstname || "FIRST_NAME"}
+                lastName={this.state.form.lastname || "LAST_NAME"}
+                jobTitle={this.state.form.jobtitle || "job_title"}
+                twitter={this.state.form.twitter || "twitter"}
+                email={this.state.form.email || "EMAIL"}
                 avatar="https://avatars3.githubusercontent.com/u/65572735?s=460&u=5faf4363dbcd5f269271410fff4e5c1045ffc5f1&v=4"
               />
             </div>
             <div className="col-6">
               <BadgeForm
                 onChange={this.handleChange}
+                onSubmit={this.handleSubmit}
                 formValues={this.state.form}
               />
             </div>
