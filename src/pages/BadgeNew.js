@@ -6,17 +6,14 @@ import BadgeForm from "../components/BadgeForm";
 import api from "../api";
 
 class BadgeNew extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+  state = {
       form: {
-        firstname: "",
-        lastname: "",
+        firstName: "",
+        lastName: "",
         email: "",
-        jobtitle: "",
+        jobTitle: "",
         twitter: "",
       },
-    };
   }
 
   handleChange = (e) => {
@@ -54,9 +51,9 @@ class BadgeNew extends React.Component {
           <div className="row">
             <div className="col-6">
               <Badge
-                firstName={this.state.form.firstname || "FIRST_NAME"}
-                lastName={this.state.form.lastname || "LAST_NAME"}
-                jobTitle={this.state.form.jobtitle || "job_title"}
+                firstName={this.state.form.firstName || "FIRST_NAME"}
+                lastName={this.state.form.lastName || "LAST_NAME"}
+                jobTitle={this.state.form.jobTitle || "job_title"}
                 twitter={this.state.form.twitter || "twitter"}
                 email={this.state.form.email || "EMAIL"}
                 avatar="https://avatars3.githubusercontent.com/u/65572735?s=460&u=5faf4363dbcd5f269271410fff4e5c1045ffc5f1&v=4"
