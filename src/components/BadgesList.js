@@ -23,6 +23,10 @@ class BadgesList extends React.Component {
             <li key={badge.id}>
               <div className="Badges___list">
                 <div className="Badges___list-container">
+                  <Link to={`/badges/${badge.id}/edit`} 
+                  className="btn btn-primary" >
+                    Edit
+                  </Link>
                   <div className="Badges___list-img">
                   <Gravatar
                     className="rounded-circle"
