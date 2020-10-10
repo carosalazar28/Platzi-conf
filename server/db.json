@@ -15,6 +15,14 @@
       "jobTitle": "Content Market",
       "twitter": "avanegas",
       "id": 3
+    },
+    {
+      "firstName": "Sebastian",
+      "lastName": "Torres",
+      "email": "juansebastiantrm@gmail.com",
+      "jobTitle": "Student",
+      "twitter": "sebastian",
+      "id": 4
     }
   ]
 }

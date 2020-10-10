@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LogoPlatziConf from "../images/platziconf-logo.svg";
 import Astronauts from "../images/astronauts.svg";
-import "../components/styles/Home.css";
+import "./styles/Home.css";
 
 class Home extends React.Component {
   render() {

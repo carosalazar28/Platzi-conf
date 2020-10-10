@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import confLogo from '../images/platziconf-logo.svg'
 import Badge from '../components/Badge'
 import DeleteBadgeModal from '../components/DeleteBadgeModal'
-import '../components/styles/BadgeDetails.css'
+import './styles/BadgeDetails.css'
 
 
 function useIncreaseCount(max) {
